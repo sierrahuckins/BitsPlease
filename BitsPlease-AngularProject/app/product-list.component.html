@@ -1,0 +1,8 @@
+<h1>Product List</h1>
+
+<!-- {{products}} -->
+<ul>
+	<li *ngFor="let product of products">
+		{{product.type}} - {{product.id}} - {{product.properties.mag}}
+	</li>
+</ul>
