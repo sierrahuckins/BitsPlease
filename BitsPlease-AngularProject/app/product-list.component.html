@@ -1,8 +1,22 @@
-<h1>Product List</h1>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.css">
+		<script type="text/javascript" source="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.js" ></script>
+	</head>
 
-<!-- {{products}} -->
-<ul>
-	<li *ngFor="let product of products">
-		{{product.type}} - {{product.id}} - {{product.properties.mag}}
-	</li>
-</ul>
+	<div class="large-12 columns">
+		<h1>Product List</h1>
+		<div class="row">
+			<!-- Individual Product -->
+			<div class="large-4 small-6 columns" *ngFor="let product of products">
+				<img src="https://ccstore-z5ia.oracleoutsourcing.com{{product.primaryMediumImageURL}}">
+				<div class="panel">
+					<h4 style="text-align:center;">{{product.displayName}}</h4>
+					<h5>{{product.description}}</h5>
+					<h5>{{product.id}}</h5>
+					<h6 class="subheader">{{product.listPrice | currency:'USD':true }} </h6>
+					<h6 class="subheader">{{product.salePrice | currency:'USD':true }} </h6>
+				</div>
+			</div>
+			<!-- Individual Product -->
+		</div>
+	</div>

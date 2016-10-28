@@ -1,12 +1,11 @@
-let nextId = 5;
 
 export class Product  {
 
 	constructor(
-		public name:string;
-		public properties:string;
-		public id:number;
-		public type:string;
+		public id:number,
+		public listPrice:number,
+		public description:string,
+		public primaryMediumImageURL:string
 
 	) {}
 }

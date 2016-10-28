@@ -10,18 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 require('./rxjs-operators');
-var AppComponent = (function () {
-    function AppComponent() {
+var Header = (function () {
+    function Header() {
         this.title = 'Angular is Ridiculous';
     }
-    AppComponent = __decorate([
+    Header = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n\t\t<h1>{{title}}</h1>\n\t\t<product-list></product-list>\n\t"
+            selector: 'header',
+            templateUrl: 'app.header.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], Header);
+    return Header;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Header = Header;
+//# sourceMappingURL=app.header.component.js.map

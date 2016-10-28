@@ -1,11 +1,10 @@
 "use strict";
-var nextId = 5;
 var Product = (function () {
-    function Product(name, properties, id, type) {
-        this.name = name;
-        this.properties = properties;
+    function Product(id, listPrice, description, primaryMediumImageURL) {
         this.id = id;
-        this.type = type;
+        this.listPrice = listPrice;
+        this.description = description;
+        this.primaryMediumImageURL = primaryMediumImageURL;
     }
     return Product;
 }());

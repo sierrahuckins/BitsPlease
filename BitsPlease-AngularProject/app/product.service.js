@@ -14,14 +14,15 @@ var Observable_1 = require('rxjs/Observable');
 var ProductService = (function () {
     function ProductService(http) {
         this.http = http;
-        this.productsUrl = 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&minmagnitude=5';
+        this.productsUrl = 'https://ccstore-z5ia.oracleoutsourcing.com/ccstoreui/v1/products';
+        this.earthquakeTestUrl = 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&minmagnitude=5';
     }
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.productsUrl).map(this.extractData).catch(this.handleError);
     };
     ProductService.prototype.extractData = function (res) {
         var body = res.json();
-        return body.features || {};
+        return body.items || {};
     };
     ProductService.prototype.handleError = function (error) {
         var errMsg = (error.message) ? error.message : error.status ? '{$error.status}' : 'Server error';

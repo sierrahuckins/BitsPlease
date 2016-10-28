@@ -6,7 +6,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ProductService {
-	private productsUrl = 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&minmagnitude=5';
+	private productsUrl = 'https://ccstore-z5ia.oracleoutsourcing.com/ccstoreui/v1/products';
+	private earthquakeTestUrl = 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&minmagnitude=5';
 
 	constructor (private http: Http) {}
 
@@ -17,7 +18,7 @@ export class ProductService {
 
 	private extractData(res: Response) {
 		let body = res.json();
-		return body.features || {};
+		return body.items || {};
 	}
 
 	private handleError (error: any) {

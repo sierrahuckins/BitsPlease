@@ -12,8 +12,6 @@ import './rxjs-operators';
 })
 export class AppComponent {
 	title = 'Angular is Ridiculous';
-	products = [
-		new Product('cake'),
-		new Product('cookies')];
+
 }
 
