@@ -1,0 +1,9 @@
+<h1>Product List</h1>
+
+<!-- {{products}} -->
+<ul>
+	<li *ngFor="let product of products">
+		<img src="{{product.primaryMediumImageURL}}"> 
+		{{product.displayName}} - {{product.description}}
+	</li>
+</ul>
