@@ -2,8 +2,10 @@
 
 <!-- {{products}} -->
 <ul>
-	<li *ngFor="let product of products">
-		<img src="{{product.primaryMediumImageURL}}"> 
-		{{product.displayName}} - {{product.description}}
+	<li class="list-unstyled" *ngFor="let product of products">
+		<img class="img-thumbnail" src="https://ccstore-z5ia.oracleoutsourcing.com{{product.primaryMediumImageURL}}">
+		<br>
+		<h4>{{product.displayName}}</h4>
+		<p>{{product.description}}</p>
 	</li>
 </ul>

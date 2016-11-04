@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  font-family: Arial;
+  font-size: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: E7E3E3;
+  padding: 10px;
+}
+
+p {
+	font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+}
+
+.app-wrapper {
+  background-color: blue;
+  padding: 10px;
+}
+
+.nav-wrapper {
+  float: left;
+  width: 200px;
+  border-right: 10px solid transparent;
+}
+.nav-wrapper div.container {
+  background-color: yellow;
+}
+
+.sidebar-wrapper {
+  float: right;
+  width: 200px;
+  border-left: 10px solid transparent;
+}
+.sidebar-wrapper div.container {
+  background-color: green;
+}
+
+.content-wrapper {
+  height: 100%;
+  margin-left: 200px;
+  margin-right: 15px;
+}
+.content-wrapper div.container {
+  background-color: cyan;
+}
+.content-wrapper .header {
+  background-color: magenta;
+  width: 100%;
+  height: 100px;
+}
+.content-wrapper .footer {
+  width: 100%;
+  background-color: orange;
+  position: absolute;
+  bottom: 0;
+}
+.content-wrapper .content-container {
+  background-color: red;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  padding: 100px 0 19px 0;
+}
+.content-wrapper .content {
+  background-color: white;
+  overflow: auto;
+  padding: 10px;
+}
+
+.img-thumbnail {
+	width: 140px;
+}
