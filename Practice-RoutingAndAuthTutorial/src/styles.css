@@ -49,7 +49,7 @@ p {
 
 .nav-wrapper a {
   color: black;
-  font-weight semibold; 
+  font-weight: semibold; 
   margin-left: 5px;
 }
 
