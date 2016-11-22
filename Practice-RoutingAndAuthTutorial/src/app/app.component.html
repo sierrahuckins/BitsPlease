@@ -1,32 +1,18 @@
-<div class="layout app-wrapper">
-    <div class="layout nav-wrapper">
-      <div class="layout container">
-      	<!-- Navigation -->
-      	<a [routerLink]="['/']">Home</a>
-		<a [routerLink]="['/product-list']">Product List</a>
-      </div>
-    </div>
-    <!-- <div class="layout sidebar-wrapper">
-      <div class="layout container">Sidebar</div>
-    </div> -->
+<div class="app-wrapper">
     <div class="content-wrapper">
-      <div class="layout container">
-        <div class="layout content-container">
-          <div class="layout content">
-          <h1 class="text-uppercase">
-  			{{title}}
-
-  			<!-- Router Outlet -->
-			<router-outlet></router-outlet>
-		  </h1>
-		</div>
+      <div class="header">
+        <div class="header-text">
+          <span id="header-title">{{title}}</span> <span id="header-subtitle">- {{subtitle}}</span>
         </div>
-        <div class="header">
-          Header
+        <div class="nav-wrapper">
+          <!-- Navigation -->
+          <a [routerLink]="['/']">Home</a>
+          <a [routerLink]="['/product-list']">Product List</a>
         </div>
-        <div class="footer">
-          Footer
-        </div>
+      </div>
+      <div class="content-container">
+        <!-- Router Outlet -->
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>

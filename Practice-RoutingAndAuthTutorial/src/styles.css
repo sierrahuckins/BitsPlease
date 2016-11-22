@@ -9,8 +9,7 @@ html, body {
 }
 
 body {
-  background-color: E7E3E3;
-  padding: 10px;
+
 }
 
 p {
@@ -22,65 +21,68 @@ p {
   position: relative;
 }
 
-.layout {
+.app-wrapper {
   width: 100%;
   height: 100%;
+  background-color: #f2f2f2;
+}
+.content-wrapper {
+  height: 100%;
+  overflow: auto;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-.app-wrapper {
-  background-color: blue;
+.header {
+  width: 100%;
+  height: 100px;
   padding: 10px;
 }
 
-.nav-wrapper {
+.header-text {
   float: left;
-  width: 200px;
-  border-right: 10px solid transparent;
-}
-.nav-wrapper div.container {
-  background-color: yellow;
 }
 
-.sidebar-wrapper {
+.nav-wrapper {
   float: right;
-  width: 200px;
-  border-left: 10px solid transparent;
-}
-.sidebar-wrapper div.container {
-  background-color: green;
 }
 
-.content-wrapper {
-  height: 100%;
-  margin-left: 200px;
-  margin-right: 15px;
+.nav-wrapper a {
+  color: black;
+  font-weight semibold; 
+  margin-left: 5px;
 }
-.content-wrapper div.container {
-  background-color: cyan;
+
+.nav-wrapper a:hover {
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.header-title {
+  font-weight: semibold;
+  font-size: 36px;
+}
+
+.header-subtitle {
+  font-weight: semibold;
+  font-size: 30px;
+}
+
+/*
+
 .content-wrapper .header {
   background-color: magenta;
   width: 100%;
   height: 100px;
 }
-.content-wrapper .footer {
-  width: 100%;
-  background-color: orange;
-  position: absolute;
-  bottom: 0;
-}
-.content-wrapper .content-container {
-  background-color: red;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  padding: 100px 0 19px 0;
-}
+
 .content-wrapper .content {
   background-color: white;
   overflow: auto;
+  top: 0;
   padding: 10px;
 }
+*/
 
 .img-thumbnail {
 	width: 140px;
