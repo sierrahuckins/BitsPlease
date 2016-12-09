@@ -2,11 +2,12 @@ import { Component, OnInit }   from '@angular/core';
 
 import { Product }             from './product';
 import { ProductService }      from './product.service';
+import { AuthService }          from '../auth/auth.service';
 
 @Component({
   selector:    'product-list',
   templateUrl: 'product-list.component.html',
-  providers:  [ ProductService ]
+  providers:  [ ProductService, AuthService ]
 })
 
 export class ProductListComponent implements OnInit {
@@ -14,7 +15,9 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   mode = 'Observable';
 
-  constructor (private productService: ProductService) {}
+  constructor (
+    private productService: ProductService,
+    private authService: AuthService) {}
 
   ngOnInit() { this.getProducts(); }
 
