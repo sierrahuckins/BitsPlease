@@ -7,5 +7,16 @@
 		<br>
 		<h4>{{product.displayName}}</h4>
 		<p>{{product.description}}</p>
+		<div [ngSwitch]="product.salePrice < product.listPrice">
+			<div *ngSwitchCase="true">
+				Sale Price: {{product.salePrice | currency:'USD':true}}<br>
+				Was: <s>{{product.listPrice | currency:'USD':true}}</s>
+			</div>
+			<div *ngSwitchCase="false">
+				Price: {{product.listPrice | currency:'USD':true}}
+			</div>
+
+		</div>
+		
 	</li>
 </ul>

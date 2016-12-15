@@ -6,7 +6,9 @@ export class Product  {
 		public name:string,
 		public properties:string,
 		public id:number,
-		public type:string
+		public type:string,
+		public activePrice:number,
+		public salePrice:number
 
 	) {}
 }
