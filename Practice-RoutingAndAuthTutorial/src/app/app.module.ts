@@ -7,6 +7,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 //declarations
 import { ProductListComponent } from './product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
 
@@ -15,7 +16,8 @@ import { routing } from './app.routes';
   declarations: [
     AppComponent, 
     ProductListComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

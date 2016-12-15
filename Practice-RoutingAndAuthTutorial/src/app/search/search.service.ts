@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { Product } from './product';
+import { Search } from './search';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class ProductService {
-	private productsUrl = 'https://ccstore-z5ia.oracleoutsourcing.com/ccstoreui/v1/products';
-	//private productsUrl = 'https://ccstore-z5ia.oracleoutsourcing.com/ccstoreui/v1/search?Ntt=cat';
+export class SearchService {
+	private searchUrl = 'https://ccstore-z5ia.oracleoutsourcing.com/ccstoreui/v1/search?Ntt=cat';
 	constructor (private http: Http) {}
 
-	getProducts(): Observable<Product[]> {
-		return this.http.get(this.productsUrl).map(this.extractData).catch(this.handleError);
-
+	getSearch(): Observable<Object[]> {
+		return this.http.get(this.searchUrl).map(this.extractData).catch(this.handleError);
 	}
 
 	private extractData(res: Response) {
 		let body = res.json();
-		return body.items || {};
+		return body.resultsList.records || {};
 	}
 
 	private handleError (error: any) {

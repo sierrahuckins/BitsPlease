@@ -1,0 +1,12 @@
+<h1>Search Results</h1>
+
+<ul>
+	<li class="list-unstyled" *ngFor="let result of search">
+		<img class="img-thumbnail" src="https://ccstore-z5ia.oracleoutsourcing.com{{result.records[0].attributes['product.primaryMediumImageURL']}}">
+		<br>
+		<h4>{{result.records[0].attributes['product.displayName']}}</h4>
+		<p>{{result.records[0].attributes['product.description']}}</p>
+		<h4>{{result.records[0].attributes['sku.activePrice']}}</h4>
+	</li>
+</ul>
+	
